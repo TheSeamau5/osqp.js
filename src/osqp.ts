@@ -155,9 +155,6 @@ export default class OSQP {
         const pointer_to_P = create_csc_pointer(P, n, n);
         const pointer_to_A = create_csc_pointer(A, m, n);
 
-
-
-
         const pointer_to_q = create_double_array_pointer(q);
         const pointer_to_l = create_double_array_pointer(l);
         const pointer_to_u = create_double_array_pointer(u);
