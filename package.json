@@ -1,0 +1,47 @@
+{
+  "name": "osqp",
+  "description": "JS Port of OSQP library using Emscripten",
+  "author": {
+    "name": "Hassan Hayat"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "dist/osqp.min.js",
+    "dist/types.d.ts"
+  ],
+  "keywords": [
+    "convex optimization",
+    "optimization",
+    "least squares",
+    "quadratic programming",
+    "operator splitting",
+    "osqp",
+    "solver"
+  ],
+  "homepage": "https://github.com/TheSeamau5/osqp.js#readme",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheSeamau5/osqp.js.git"
+  },
+  "type": "module",
+  "source": "src/osqp.ts",
+  "main": "dist/osqp.min.js",
+  "types": "dist/types.d.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.0.1",
+    "@parcel/transformer-typescript-types": "^2.0.1",
+    "@types/emscripten": "^1.39.6",
+    "parcel": "^2.0.1",
+    "typescript": ">=3.0.0"
+  },
+  "targets": {
+    "main": {
+      "optimize": true
+    }
+  },
+  "readme": "JS Port of OSQP library using Emscripten",
+  "readmeFilename": "README.md"
