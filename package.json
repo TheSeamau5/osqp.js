@@ -1,5 +1,5 @@
 {
-  "name": "osqp",
+  "name": "osqp.js",
   "description": "JS Port of OSQP library using Emscripten",
   "author": {
     "name": "Hassan Hayat"
@@ -45,3 +45,4 @@
   },
   "readme": "JS Port of OSQP library using Emscripten",
   "readmeFilename": "README.md"
+}
