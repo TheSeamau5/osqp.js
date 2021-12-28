@@ -170,7 +170,7 @@ export default class OSQP {
         );
 
         // Create the settings
-        const _settings = { ...SettingsDefault, settings };
+        const _settings = { ...SettingsDefault, ...settings };
         const pointer_to_settings = c_module._create_settings(
             _settings.rho,
             _settings.sigma,
@@ -305,11 +305,25 @@ export default class OSQP {
         const {
             pointer_to_workspace,
             pointer_to_data,
-            pointer_to_settings
+            pointer_to_settings,
+
+            // State Pointers
+            pointer_to_P,
+            pointer_to_A,
+            pointer_to_q,
+            pointer_to_l,
+            pointer_to_u,
         } = this._state;
 
         c_module._osqp_cleanup(pointer_to_workspace);
         c_module._cleanup_data(pointer_to_data);
         c_module._cleanup_settings(pointer_to_settings);
+
+        // Free state pointers
+        c_module._free(pointer_to_P);
+        c_module._free(pointer_to_A);
+        c_module._free(pointer_to_q);
+        c_module._free(pointer_to_l);
+        c_module._free(pointer_to_u);
     }
 }
